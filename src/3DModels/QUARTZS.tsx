@@ -56,7 +56,7 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   }, [groupRef.current]);
 
 
-  const { nodes, materials } = useGLTF('/Shoe3DStore/Model/QUARTZ.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/3DShoeStore/Model/QUARTZ.glb') as GLTFResult
 
   useFrame(() => {
     if (groupRef.current) {
@@ -120,4 +120,4 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/Shoe3DStore/Model/QUARTZ.glb')
+useGLTF.preload('/3DShoeStore/Model/QUARTZ.glb')
