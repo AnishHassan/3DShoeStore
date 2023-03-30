@@ -98,6 +98,9 @@ const SlideWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+   @media (max-width: 600px) {
+ height: 300px;
+}
 `;
 
 
@@ -154,6 +157,7 @@ const DialogWrapper = styled.div<{ isOpen: boolean }>`
   left: 0;
   right: 0;
   bottom: 0;
+   
   background-color: rgba(0, 0, 0, 0.5);
   display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};                     
   justify-content: center;
@@ -164,6 +168,11 @@ const DialogWrapper = styled.div<{ isOpen: boolean }>`
 const DialogContent = styled.div`
   width: 300px;
   height: 450px;
+   @media (max-width: 600px) {
+    width: 250px;
+  height: 350px;
+  padding: 10px;
+}
   background-color: white;
   padding: 20px;
   z-index: 3;
@@ -187,6 +196,10 @@ const CloseButton = styled.button`
   cursor: pointer;
   color: #000;
   z-index: 3;
+  @media (max-width: 600px) {
+  top: 10px;
+   font-size: 20px;
+}
 `;
 
 export default Dialog;

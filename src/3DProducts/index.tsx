@@ -28,8 +28,12 @@ const ProductButton = styled.img<{ isActive: boolean }>`
   @media (max-width: 1440px) {
   width: 95px;
   height: 95px;
-
   }
+ @media (max-width: 600px) {
+  width: 95px;
+  height: 95px;
+}
+
 `;
 
 const ProductPrice = styled.h4<{ isActive: boolean }>`

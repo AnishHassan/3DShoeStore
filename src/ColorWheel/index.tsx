@@ -186,6 +186,9 @@ const WheelContainer = styled.div`
   animation: rotate-wheel 0.5s ease-in-out;
   animation-fill-mode: forwards;
   margin-top : -300px;
+   @media (max-width: 600px) {
+  margin-top : -240px;
+}
 `;
 
 

@@ -20,7 +20,7 @@ const ProductModel2 = () => {
 
     return (
         <>
-            {isSmallScreen && <StyledCanvas style={{ height: '200px', width: 'auto' }} shadows camera={{ position: [4, 0, -12], fov: 35 }}>  <ambientLight />
+            {isSmallScreen && <StyledCanvas style={{ height: '160px', width: '190' }} shadows camera={{ position: [4, 0, -12], fov: 35 }}>  <ambientLight />
                 <Stage intensity={1.5} environment="city" shadows={{ type: 'accumulative', colorBlend: 2, opacity: 2 }} adjustCamera={0.9}>
                     <Model />
                 </Stage>

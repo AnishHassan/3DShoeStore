@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import shoe1 from './Product_Buttons/APATITE.png'
 import shoe2 from './Product_Buttons/CALCITE.png'
 import shoe3 from './Product_Buttons/COPPER.png'
@@ -42,6 +42,10 @@ border-radius : 8px;
 align-items : center;
 margin-top : 5px;
 
+ @media (max-width: 600px) {
+padding : 11px 13px;
+font-size: 0.8rem;
+}
 
   &:hover {  
     span {
@@ -150,14 +154,21 @@ const App = () => {
           </BackgroundController>
 
           <HeaderContainer>
-            <ProductView products={ProductsLeft} />
+            <Suspense fallback={<span>Loading...</span>}>
+              <ProductView products={ProductsLeft} />
+
+            </Suspense>
+
 
             <MidContainer>
               <USerModule username='Anish Hassan' email='anish@gmail.com' imageUrl={user} />
               <ColorWheel />
             </MidContainer>
 
-            <ProductView products={ProductsLeft} />
+            <Suspense fallback={<span>Loading...</span>}>
+              <ProductView products={ProductsLeft} />
+            </Suspense>
+
 
           </HeaderContainer>
 
@@ -176,7 +187,11 @@ const App = () => {
 
 
           <ModelContainer>
-            <ProductModel2 />
+            <Suspense fallback={<span>Loading...</span>}>
+              <ProductModel2 />
+            </Suspense>
+
+
           </ModelContainer>
 
 
@@ -206,6 +221,8 @@ const App = () => {
 
 export default App;
 
+
+
 const MainContainer = styled.div`
 position : relative;
 `
@@ -226,7 +243,11 @@ const ModelContainer = styled.div`
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
- 
+   @media (max-width: 600px) {
+position: absolute;
+bottom : -18%;
+left: 50%;
+}
   `
 const AudioContainer = styled.div`
  position: fixed;
@@ -236,10 +257,16 @@ width : 28rem;
 $rhap_theme-color: #fff !important; 
 @media (max-width: 1440px) {
   bottom : 30px;
-left : 20px;
+left : 50%;
 width : 22rem;
-
   }
+
+  @media (max-width: 600px) {
+position: absolute;
+ width : 14rem;
+bottom :100px;
+left : 84px;
+}
 .rhap_container{
   background-color : transparent !important;
 }
@@ -253,4 +280,11 @@ right : 60px;
 display : flex;
 flex-direction: column;
 align-items : center;
+
+  @media (max-width: 600px) {
+position: absolute;
+ width : 12rem;
+bottom :32%;
+left : 100px;
+}
 `

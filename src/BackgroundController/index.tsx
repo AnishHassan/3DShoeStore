@@ -29,6 +29,10 @@ const RectangleOne = styled.div<{ selectedColorhex: string, selectedColorsec: st
   top: 0;
   width: 36.25rem;
 height: 28.125rem;
+@media (max-width: 600px) {
+ width: 8.25rem;
+height: 58.125rem;
+}
   background: linear-gradient(to top left, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
   border-radius: 0 0 580px 0;
 `;
@@ -39,6 +43,10 @@ const RectangleTwo = styled.div<{ selectedColorhex: string, selectedColorsec: st
   top: 0;
  width: 36.25rem;
 height: 28.125rem;
+@media (max-width: 600px) {
+ width: 15.25rem;
+height: 58.125rem;
+}
   background: linear-gradient(to top right, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
   border-radius: 0 0 0 580px;
 `;
@@ -49,8 +57,13 @@ const RectangleThree = styled.div<{ selectedColorhex: string, selectedColorsec: 
   left: 50%;
   transform: translateX(-50%);
   width: 39.375rem;
-height: 25rem;
+  height: 25rem;
+@media (max-width: 600px) {
+ width: 100vw;
+left: 38%;
+ bottom: 0;
 
+}
   background: linear-gradient(to top right, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
   border-radius: 630px 630px 0 0;
   margin: 0 auto;
@@ -64,7 +77,7 @@ const BackgroundController = ({ children }: BackgroundControllerProps) => {
   console.log(selectedColor);
   return (
     <>
-      
+
       <BackgroundContainer selectedColorhex={selectedColor.hex} selectedColorsec={selectedColor.sec} />
       <RectangleOne selectedColorhex={selectedColor.hex} selectedColorsec={selectedColor.sec} ></RectangleOne>
       <RectangleTwo selectedColorhex={selectedColor.hex} selectedColorsec={selectedColor.sec} ></RectangleTwo>

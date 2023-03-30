@@ -40,6 +40,11 @@ const SizeButton = styled.button<SizeButtonProps>`
   cursor: pointer;
   border: none;
   font-size: 1.2rem;
+   @media (max-width: 600px) {
+ width: 25px;
+  height: 25px;
+  font-size: 0.8rem;
+}
   color: ${({ color, selected }) => (selected ? color : "#000")};
   background-color:  #fff ;
   opacity: ${({ selected }) => (selected ? 0.9 : 0.2)};

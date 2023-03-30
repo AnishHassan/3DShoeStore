@@ -30,6 +30,9 @@ display:flex ;
 align-items : center;
 justify-content : center;
 font-size : 26px;
+ @media (max-width: 600px) {
+ font-size : 22px;
+}
 
 `
 
@@ -38,6 +41,10 @@ const ButtonsGrid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   grid-gap: 10px;
   min-width: 250px;
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+ min-width: 200px;
+}
   `;
 
 const ButtonWrapper = styled.div`
@@ -51,6 +58,13 @@ const ButtonImage = styled.img`
     height: 80px;
     object-fit: cover;
     border-radius: 5px;
+     @media (max-width: 600px) {
+    width: 50px;
+    height: 50px;
+    margin-left : 10px;
+    align-items : center;
+
+}
   `;
 
 const ButtonNumber = styled.span`
@@ -68,6 +82,9 @@ const ButtonNumber = styled.span`
     border-radius : 50%;
     background-color  : #fff;
     text-shadow: 1px 1px 1px black;
+     @media (max-width: 600px) {
+ font-size: 12px;
+}
   `;
 
 export default SlideContent

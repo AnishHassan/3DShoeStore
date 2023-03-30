@@ -6,6 +6,12 @@ const ProductContainer = styled.div`
 position : absolute;
 margin-left : 6rem;
 margin-top : 10rem; 
+  @media (max-width: 600px) {
+position: absolute;
+ width : 12rem;
+bottom :60%;
+left : 8%;
+}
 `
 
 const ProductName = styled.div`
@@ -14,6 +20,9 @@ const ProductName = styled.div`
   font-weight: bold;
   color: #FFFFFF;
   text-shadow: 0px 0px 10px #FFFFFF;
+  @media (max-width: 600px) {
+font-size: 38px;
+}
 `
 
 const ProductColorName = styled.div`
@@ -23,6 +32,10 @@ font-family: Arial, sans-serif;
   color: #FFFFFF;
   margin-top: 5px;
   margin-left: 8rem;
+   @media (max-width: 600px) {
+font-size: 18px;
+ margin-left: 7rem;
+}
 `
 
 const ProductDesc = () => {
